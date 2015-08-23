@@ -28,33 +28,9 @@ public class EntryPoint {
 
         addPlayerList(battleWindow, verticalBox);
 
-        addSkylanderList(battleWindow, verticalBox);
-
         battleWindow.add(verticalBox);
 
         battleWindow.setVisible(true);
-    }
-
-    private static void addSkylanderList(final JFrame battleWindow, Box verticalBox) {
-        final Vector<String> skylanderList = new Vector<String>();
-
-        final JList skylanderListComponent = new JList(skylanderList);
-
-        verticalBox.add(CommonUI.createListPane(skylanderListComponent, "Skylanders"));
-
-        verticalBox.add(CommonUI.createButton("Add Skylander", new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String result = JOptionPane.showInputDialog(
-                        battleWindow,
-                        "Enter skylander name",
-                        "Create New Skylander",
-                        JOptionPane.PLAIN_MESSAGE);
-
-                skylanderList.add(result);
-                skylanderListComponent.updateUI();
-            }
-        }));
-
     }
 
     private static void addPlayerList(final JFrame battleWindow, Box verticalBox) {
@@ -69,7 +45,7 @@ public class EntryPoint {
             }
 
             public void keyPressed(KeyEvent e) {
-                if( e.getKeyCode() == 8) {
+                if (e.getKeyCode() == 8) {
                     final int selectedIndex = playerListComponent.getSelectedIndex();
                     playerListComponent.clearSelection();
                     playerList.removeElementAt(selectedIndex);
@@ -86,7 +62,8 @@ public class EntryPoint {
         final JScrollPane listPane = CommonUI.createListPane(playerListComponent, "Players");
         verticalBox.add(listPane);
 
-        verticalBox.add(CommonUI.createButton("Add Player", new ActionListener() {
+        final Box horizontalBox = Box.createHorizontalBox();
+        horizontalBox.add(CommonUI.createButton("Add Player", new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String result = JOptionPane.showInputDialog(
                         battleWindow,
@@ -101,6 +78,13 @@ public class EntryPoint {
 
             }
         }));
+        horizontalBox.add(CommonUI.createButton("Play!", new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                BattleWindow Skylanders = new BattleWindow(playerList);
+                Skylanders.display();
+            }
+        }));
+        verticalBox.add(horizontalBox);
     }
 
     private static void savePlayerList(Vector<String> playerList) {

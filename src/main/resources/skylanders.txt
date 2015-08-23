@@ -1,0 +1,73 @@
+Skylander	Damage	Health
+Barkley	9	2
+Bat Spin	3	8
+Blackout	5	6
+Blades	10	1
+Blastermind	10	1
+Bop	3	8
+Breeze	9	2
+Bushwhack	5	6
+Chopper	8	3
+Cobra Cadabra	10	1
+Deja Vu	8	3
+Drobit	2	9
+Echo	5	6
+Enigma	10	1
+Eye Small	4	7
+Fist Bump	10	1
+Fling Kong	9	2
+Flip Wreck	8	3
+Food Fight	9	2
+Fryno	10	1
+Funny Bone	3	8
+Gearshift	10	1
+Gill Grunt	5	6
+Gill Runt	5	6
+Gusto	10	1
+Head Rush	10	1
+High Five	8	3
+Hijinx	10	1
+Jawbreaker	10	1
+Jet-Vac	6	5
+Ka-Boom	4	7
+Knight Light	6	5
+Knight Mare	6	5
+Krypt King	4	7
+Lob-Star	8	3
+Mini Jini	1	10
+Pet Vac	2	9
+Pop Fizz	4	7
+Rocky Roll	6	5
+Short Cut	3	8
+Shroomboom	2	9
+Small Fry	3	8
+Snap Shot	7	4
+Spotlight	5	6
+Spry	3	8
+Terrabite	5	6
+Thumpling	8	3
+Thunderbolt	9	2
+Torch	4	7
+Trail Blazer	6	5
+Tread Head	6	5
+Trigger Snappy	6	5
+Tuff Luck	5	6
+Wallop	6	5
+Weeruptor	6	5
+Whisper Elf	3	8
+Wildfire	7	4
+Dark Food Fight	9	2
+Dark Snap Shot	10	1
+Dark Wildfire	10	1
+Eggsellent Weeruptor	9	2
+Gnarly Barkley	8	3
+King Cobra Cadabra	9	2
+Legendary Blades	7	4
+Legendary Bushwhack	9	2
+Legendary Deja Vu	8	3
+Legendary Jawbreaker	10	1
+Love Potion Pop Fizz	9	2
+Nitro Head Rush	10	1
+Nitro Krypt King	9	2
+Power Punch Pet Vac	8	3
+Winterfest Lob-Star	10	1
