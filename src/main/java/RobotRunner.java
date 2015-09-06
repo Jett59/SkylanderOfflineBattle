@@ -28,7 +28,7 @@ public class RobotRunner {
         gameWindow.setVisible(true);
         gameWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        imageIcon = new ImageIcon(RobotRunner.class.getResource("robot2.png"));
+        imageIcon = new ImageIcon(RobotRunner.class.getResource("pac-man.png"));
 
         Thread.sleep(500);
 
