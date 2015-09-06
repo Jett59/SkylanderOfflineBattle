@@ -1,4 +1,4 @@
-import com.sun.java.swing.ui.CommonUI;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,6 +21,7 @@ public class EntryPoint {
 
     public static void main(String[] args) throws IOException {
         final JFrame battleWindow = new JFrame("Skylander Offline Battle!");
+        battleWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         battleWindow.setSize(new Dimension(640, 480));
         battleWindow.setBackground(Color.BLACK);
 
@@ -59,11 +60,12 @@ public class EntryPoint {
             }
         });
 
-        final JScrollPane listPane = CommonUI.createListPane(playerListComponent, "Players");
+        final JScrollPane listPane = new JScrollPane(playerListComponent);
         verticalBox.add(listPane);
 
         final Box horizontalBox = Box.createHorizontalBox();
-        horizontalBox.add(CommonUI.createButton("Add Player", new ActionListener() {
+        JButton addPlayerButton = new JButton("Add Player");
+        addPlayerButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String result = JOptionPane.showInputDialog(
                         battleWindow,
@@ -77,13 +79,16 @@ public class EntryPoint {
                 savePlayerList(playerList);
 
             }
-        }));
-        horizontalBox.add(CommonUI.createButton("Play!", new ActionListener() {
+        });
+        horizontalBox.add(addPlayerButton);
+        JButton playButton = new JButton("Play!");
+        playButton.addActionListener( new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 BattleWindow Skylanders = new BattleWindow(playerList);
                 Skylanders.display();
             }
-        }));
+        });
+        horizontalBox.add(playButton);
         verticalBox.add(horizontalBox);
     }
 

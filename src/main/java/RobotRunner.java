@@ -41,11 +41,9 @@ public class RobotRunner {
         drawNew();
 
         gameWindow.addKeyListener(new KeyListener() {
-            @Override
             public void keyTyped(KeyEvent e) {
             }
 
-            @Override
             public void keyPressed(KeyEvent e) {
                 blackCurrent();
                 switch (e.getKeyCode()) {
@@ -82,7 +80,6 @@ public class RobotRunner {
 
             }
 
-            @Override
             public void keyReleased(KeyEvent e) {
             }
         });
